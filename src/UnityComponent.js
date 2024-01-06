@@ -47,7 +47,9 @@ const UnityComponent = () => {
 
   useEffect(() => {
     const handleUnityMessage = (event) => {
-      if (event === 'GameEnded') {
+      console.log(typeof event);
+      let eventString = String(event);
+      if (eventString.includes('GameEnded')) {
         setShowForm(true);
       }
     };
